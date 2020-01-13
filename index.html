@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!--Calculator Grid-->
+    <div class="grid-wrap">
+      <div class="screen">
+        <div class="previous-output"></div>
+        <div class="current-output"></div>
+      </div>
+      <button class="span-two" onclick="initCalculator()">AC</button>
+      <button onclick="delete()">DEL</button>
+      <button onclick="chooseOperator(/)">/</button>
+      <button onclick="insertNumber(7)">7</button>
+      <button onclick="insertNumber(8)">8</button>
+      <button onclick="insertNumber(9)">9</button>
+      <button onclick="chooseOperator(x)">x</button>
+      <button onclick="insertNumber(4)">4</button>
+      <button onclick="insertNumber(5)">5</button>
+      <button onclick="insertNumber(6)">6</button>
+      <button onclick="chooseOperator(-)">-</button>
+      <button onclick="insertNumber(1)">1</button>
+      <button onclick="insertNumber(2)">2</button>
+      <button onclick="insertNumber(3)">3</button>
+      <button onclick="chooseOperator(+)">+</button>
+      <button onclick="insertNumber(0)">0</button>
+      <button onclick="insertNumber('.')">.</button>
+      <button class="span-two" onclick="evaluate()">=</button>
+    </div>
+    <!--JS Script -->
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+
+</html>
