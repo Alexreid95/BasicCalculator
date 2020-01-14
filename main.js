@@ -24,35 +24,23 @@ function initCalculator() {
 
 //Appends the value of the button
 function insertNumber(value) {
-  if (currentValue === "0") {
-    currentValue = value.toString();
-  } else {
-    currentValue += value;
-  }
+  if (value == "." && currentValue.slice(-1) == ".") { return; }
+  (currentValue === "0") ? currentValue = value.toString(): currentValue += value;
   operation = "";
   updateDisplay();
 }
 
 //Selects operation, if operation is already selected, update to new one
 function chooseOperator(operator) {
-  if (operation === "") {
-    operation = operator;
-    currentValue += operation;
-  } else {
-    currentValue = currentValue.slice(0, -1);
-    operation = operator;
-    currentValue += operation;
-  }
+  (operation === "") ? currentValue: currentValue = currentValue.slice(0, -1);
+  operation = operator;
+  currentValue += operation;
   updateDisplay();
 }
 
 //Deletes previous appended element
 function back() {
-  if (currentValue.length === 1) {
-    currentValue = "0";
-  } else {
-    currentValue = currentValue.slice(0, -1);
-  }
+  (currentValue.length === 1) ? currentValue = "0": currentValue = currentValue.slice(0, -1);
   operation = "";
   updateDisplay();
 }
