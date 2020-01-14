@@ -30,6 +30,13 @@ function insertNumber(value) {
   updateDisplay();
 }
 
+//Appends value of the previous computation (previousValue) to currentValue
+function insertANS() {
+  if (isNaN(parseFloat(currentValue.slice(-1))) || currentValue === "0") {
+    insertNumber(previousValue);
+  }
+}
+
 //Selects operation, if operation is already selected, update to new one
 function chooseOperator(operator) {
   (operation === "") ? currentValue: currentValue = currentValue.slice(0, -1);
