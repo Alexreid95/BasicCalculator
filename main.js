@@ -57,5 +57,12 @@ function back() {
   updateDisplay();
 }
 
+//Computes currentValue and adds value to previousValue
+function compute() {
+  previousValue = eval(currentValue);
+  currentValue = "0";
+  updateDisplay();
+}
+
 //Running functions
 initCalculator();
